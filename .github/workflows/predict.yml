@@ -23,7 +23,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Prediction Script
-        run: python scripts/predict.py
+        run: python predict.py
 
       - name: Commit Prediction Result
         run: |
