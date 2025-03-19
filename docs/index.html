@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Penguin Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        #prediction {
+            font-size: 24px;
+            font-weight: bold;
+            color: #27ae60;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
 
+    <h1>Penguin Species Prediction</h1>
+    <p>Every day at 7:30 AM, we analyze a new penguin found in New York!</p>
+    
+    <h2>Latest Prediction:</h2>
+    <p id="prediction">Loading...</p>
+
+    <script>
+        // Fetch prediction from the text file in GitHub repo
+        fetch('../predictions/latest_prediction.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("prediction").innerText = data;
+            })
+            .catch(error => {
+                document.getElementById("prediction").innerText = "Failed to load prediction.";
+                console.error("Error fetching prediction:", error);
+            });
+    </script>
+
+</body>
+</html>
