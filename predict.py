@@ -4,7 +4,7 @@ import requests
 import pandas as pd
 
 # Load trained model
-model_path = "models/penguin_classifier.pkl"
+model_path = "penguin_classifier.pkl"
 clf = joblib.load(model_path)
 
 # API endpoint
