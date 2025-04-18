@@ -1,8 +1,8 @@
 name: Daily Penguin Prediction
 
 on:
-  schedule:
-    - cron: "30 7 * * *"  # Runs daily at 7:30 AM UTC
+ # schedule:
+   # - cron: "30 7 * * *"  # Runs daily at 7:30 AM UTC
   workflow_dispatch:  # Allows manual execution
 
 jobs:
